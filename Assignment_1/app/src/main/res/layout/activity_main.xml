@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/labelOne"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        android:padding="15dp"
+        android:labelFor="@+id/inputONe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="U.S.Dollar"
+        />
+
+      <EditText
+          android:id="@+id/inputONe"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/labelOne"
+          android:layout_margin="50px"
+          android:layout_width="200dp"
+          android:layout_height="70dp"
+          android:background="@color/teal_200"
+          android:textColor="@color/black"
+          />
+
+    <TextView
+        android:id="@+id/labelTwo"
+        app:layout_constraintTop_toBottomOf="@id/inputONe"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="20dp"
+        android:padding="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Egyptian pound"
+
+        />
+
+    <EditText
+        android:id="@+id/inputTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTwo"
+        android:layout_margin="50px"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:background="@color/teal_200"
+        android:textColor="@color/black"
+        />
+
+     <Button
+         android:id="@+id/btn1"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/inputTwo"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="30dp"
+         android:layout_marginTop="30dp"
+         android:text="Convert"
+         />
+
+     <Button
+         android:id="@+id/btn2"
+         app:layout_constraintStart_toStartOf="parent"
+         app:layout_constraintTop_toBottomOf="@+id/btn1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_marginLeft="30dp"
+         android:layout_marginTop="30dp"
+         android:text="Clear"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

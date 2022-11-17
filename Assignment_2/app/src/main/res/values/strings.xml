@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">To Do List </string>
+
+    <string-array name="grid">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+        <item>e</item>
+        <item>f</item>
+        <item>g</item>
+        <item>h</item>
+
+    </string-array>
+
+
+
+
+
+</resources>

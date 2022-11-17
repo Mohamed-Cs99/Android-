@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmployeeActivity"
+    android:padding="20dp"
+    android:background="#ACD3CB"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Employee Data "
+        android:textSize="32dp"
+        android:textColor="@color/black"
+        />
+    <EditText
+        android:id="@+id/empId"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Employee id "
+        android:textColorHint="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/empName"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Employee Name"
+        android:textColorHint="@color/white"
+        />
+    <EditText
+        android:id="@+id/empTitle"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Employee title "
+        android:textColorHint="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/empPhone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Employee phone"
+        android:textColorHint="@color/white"
+        />
+    <EditText
+        android:id="@+id/empmail"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Employee Email"
+        android:textColorHint="@color/white"
+        />
+    <EditText
+        android:id="@+id/empDept"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Employee department"
+        android:textColorHint="@color/white"
+        />
+    <Button
+        android:id="@+id/empBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="110dp"
+        android:text="Add Employee data"
+        />
+
+    <Button
+        android:id="@+id/empData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="110dp"
+        android:text="Employee Data Show"
+        />
+</LinearLayout>
