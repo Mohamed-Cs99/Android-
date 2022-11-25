@@ -70,8 +70,8 @@ public class Emp_DB extends SQLiteOpenHelper {
     public Cursor getEmployees(String n)
     {
         sql_db =getReadableDatabase() ;
-        String []args ={n} ;
-        Cursor cr = sql_db.rawQuery("select name from employee where name like %?%",args) ;
+        String []args ={'%'+n+'%'} ;
+        Cursor cr = sql_db.rawQuery("select name from employee where name like ?",args) ;
         if (cr != null)
             cr.moveToFirst();
         sql_db.close();

@@ -30,6 +30,7 @@ public class DataShow_Activity extends AppCompatActivity {
         empBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                adapt.clear();
                 String temp= empName.getText().toString() ;
                 Cursor mycr = empDatabase.getEmployees(temp);
                // adapt.add("heoll");
