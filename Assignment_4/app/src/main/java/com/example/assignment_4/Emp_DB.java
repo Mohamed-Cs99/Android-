@@ -20,7 +20,7 @@ public class Emp_DB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create table department(dept_id integer primary key autoIncrement, name text )");
+        db.execSQL("Create table department(dept_id integer primary key autoIncrement,name text )");
 
         db.execSQL("Create table employee(Emp_id integer primary key autoincrement ,name text not null , title text ,phone text not null ,email text not null ,dept_id integer , foreign key(dept_id)references department(dept_id))");
     }
@@ -77,5 +77,30 @@ public class Emp_DB extends SQLiteOpenHelper {
         sql_db.close();
         return cr;
     }
+
+    public Cursor getEmployeeData(int empId)
+    {
+        sql_db=getReadableDatabase();
+        String[]args = {String.valueOf(empId)};
+        Cursor cr = sql_db.rawQuery("select name , title ,phone , email ,dept_id from employee where Emp_id = ?",args);
+
+        if(cr!=null)
+            cr.moveToFirst();
+        sql_db.close();
+        return  cr ;
+
+     }
+    public Cursor getDepartementName(int deptid)
+    {
+        sql_db=getReadableDatabase();
+        String[]args = {String.valueOf(deptid)};
+        Cursor cr = sql_db.rawQuery("select name from department where dept_id=?",args);
+        cr.moveToFirst();
+        sql_db.close();
+        return  cr ;
+
+    }
+
+
 
 }

@@ -31,23 +31,26 @@ public class DataShow_Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 adapt.clear();
-                String temp= empName.getText().toString() ;
-                Cursor mycr = empDatabase.getEmployees(temp);
-               // adapt.add("heoll");
-               // Toast.makeText(getApplicationContext(),temp,Toast.LENGTH_LONG).show();
+                int tempid= Integer.parseInt(empName.getText().toString());
+                Cursor mycr = empDatabase.getEmployeeData(tempid);
+//
+               int deptnum =Integer.parseInt(mycr.getString(4));
+//               Cursor dptCr =empDatabase.getDepartementName(deptnum);
+//               String deptName =dptCr.getString(0);
+//               Toast.makeText(getApplicationContext(),deptName,Toast.LENGTH_LONG).show();
                 while (!mycr.isAfterLast())
                 {
-                    adapt.add(mycr.getString(0));
-
+                    adapt.add("Name : "+mycr.getString(0));
+                    adapt.add("Title : "+mycr.getString(1));
+                    adapt.add("Phone : "+mycr.getString(2));
+                    adapt.add("Email : "+mycr.getString(3));
+                    adapt.add("Departement Id : "+mycr.getString(4));
                     mycr.moveToNext();
                 }
+
+
             }
         });
-       // Cursor mycr = empDatabase.getEmployees(temp);
-      /*   while (!mycr.isAfterLast())
-        {
-         adapt.add(mycr.getString(0));
-         mycr.moveToNext() ;
-        }*/
+
     }
 }

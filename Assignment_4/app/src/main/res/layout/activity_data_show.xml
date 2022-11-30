@@ -12,7 +12,7 @@
         android:id="@+id/edtxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Enter Employee Name"
+        android:hint="Enter Employee Id"
         android:textColor="@color/black"
         android:textSize="23dp"
         app:layout_constraintStart_toStartOf="parent"
